@@ -1,0 +1,20 @@
+#print("a","\t","b","\t","pow(a, b)")
+#print("1","\t","2","\t")
+#print("2","\t","3","\t")
+#print("3","\t","4","\t")
+#print("4","\t","5","\t")
+#print("5","\t","6","\t")
+
+
+first_pow = int(1 * 1)
+second_pow = int(2 * 2 * 2)
+three_pow = int(3 * 3 * 3 * 3)
+four_pow = int(4 * 4 * 4 * 4 * 4)
+five_pow = int(5 * 5 * 5 * 5 * 5 * 5)
+
+print("a","\t","b","\t","pow(a, b)")
+print("1","\t","2","\t", first_pow)
+print("2","\t","3","\t", second_pow)
+print("3","\t","4","\t", three_pow)
+print("4","\t","5","\t", four_pow)
+print("5","\t","6","\t", five_pow)
