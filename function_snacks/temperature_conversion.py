@@ -1,25 +1,27 @@
-def temperature_fahrenheit(fahrenheit):
+def temperature_fahrenheit(value, symbol):
 
-	celsius = fahrenheit - 32 * 5/9
-	fahrenheit = celsius * 9/5 + 32
+	val = float(value)
+	if symbol == "C" or symbol == "c":
+		celsius = val
+		# celsius = float(input("Enter Celsius: "))
+		fahrenheit = celsius * 9/5 + 32
+	elif symbol == "F" or symbol == "f":
+		fahrenheit = val
+		# fahrenheit = float(input("Enter fahrenheit: "))
+		celsius = fahrenheit - 32 * 5/9
+	else:
+		return "Invalid Input"
 
 	threshold = 50
 
-
-	if celsius < threshold:
+	if celsius < threshold or fahrenheit < threshold:
 		return "Cold advisory"
-	elif celsius >= threshold:
-		return "Heat alert"
-
-	if fahrenheit < threshold:
-		return "Cold advisory"
-	elif fahrenheit >= threshold:
+	else:
 		return "Heat alert"
 
 
-celsius = float(input("Enter Celsius: "))
-fahrenheit = float(input("Enter fahrenheit: "))
+value = input("Enter Value: ")
+symbol = input("Enter Temperature Value(C / F): ")
 
-print(temperature_fahrenheit(celsius))
-print(temperature_fahrenheit(fahrenheit))
+print(temperature_fahrenheit(value, symbol))
 
