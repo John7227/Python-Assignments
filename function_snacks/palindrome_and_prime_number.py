@@ -49,3 +49,59 @@ print(palindrome_and_prime_number(given_number))
 
 
  # and given_number % 1 == 0 and given_number % given_number == 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+def check_number(number):
+    # 1. Check for Palindrome
+    num_str = str(number)
+    is_palindrome = num_str == num_str[::-1]
+
+    # 2. Check for Prime
+    is_prime = True
+    if number <= 1:
+        is_prime = False
+    else:
+        for i in range(2, int(number**0.5) + 1):
+            if number % i == 0:
+                is_prime = False
+                break  # Stop looping immediately if we find a factor
+
+    # Return both results together
+    return is_palindrome, is_prime
+
+
+def run_test(user_number):
+    # Call the main function and get both results at once
+    palindrome_result, prime_result = check_number(user_number)
+
+    # Print the results nicely
+    print(f"Results for {user_number}:")
+    print(f"- Is it a palindrome? {palindrome_result}")
+    print(f"- Is it a prime number? {prime_result}")
+    print("-" * 25)  # Visual separator line
+
+
+
+
+
+
+
+
+
+
+
+
+
